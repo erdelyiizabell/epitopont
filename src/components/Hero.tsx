@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center pt-20">
+    <section className="relative min-h-screen flex items-center pt-24">
       <div className="absolute inset-0 z-0">
         <img
           src={`${import.meta.env.BASE_URL}images/meditation-office.png`}
