@@ -7,6 +7,7 @@ const packages = [
     priceWeek: '49.000 Ft / hét',
     priceMonth: '175.000 Ft / hónap',
     accent: false,
+    gold: false,
   },
   {
     name: 'FLOW csomag',
@@ -14,6 +15,7 @@ const packages = [
     priceWeek: '89.000 Ft / hét',
     priceMonth: '319.000 Ft / hónap',
     accent: true,
+    gold: false,
   },
   {
     name: 'HARMÓNIA csomag',
@@ -26,6 +28,7 @@ const packages = [
     priceWeek: null,
     priceMonth: '799.000 Ft / hónap',
     accent: false,
+    gold: true,
   },
 ]
 
@@ -61,22 +64,24 @@ export default function CorporateWellbeing() {
             />
           </div>
         </div>
-
+ 
         <div className="grid md:grid-cols-3 gap-8">
           {packages.map((pkg) => (
             <div
               key={pkg.name}
-              className={`rounded-2xl p-8 ${
-                pkg.accent
+              className={`rounded-2xl p-8 transition-all duration-300 ${
+                pkg.gold
+                  ? 'bg-gradient-to-br from-secondary-light via-secondary to-[#b39359] text-text shadow-xl hover:scale-105 border border-secondary/30'
+                  : pkg.accent
                   ? 'bg-primary text-white shadow-xl scale-105'
                   : 'bg-warm border border-warm-dark'
               }`}
             >
-              <h3 className={`text-xl font-bold mb-1 ${pkg.accent ? 'text-white' : 'text-text'}`}>
+              <h3 className={`text-xl font-bold mb-1 ${pkg.gold ? 'text-text' : pkg.accent ? 'text-white' : 'text-text'}`}>
                 {pkg.name}
               </h3>
               {pkg.subtitle && (
-                <p className={`text-sm mb-4 ${pkg.accent ? 'text-white/80' : 'text-text-light'}`}>
+                <p className={`text-sm mb-4 ${pkg.gold ? 'text-text-light/90' : pkg.accent ? 'text-white/80' : 'text-text-light'}`}>
                   {pkg.subtitle}
                 </p>
               )}
@@ -85,22 +90,22 @@ export default function CorporateWellbeing() {
                   <li key={feature} className="flex items-start gap-3">
                     <Check
                       className={`w-5 h-5 mt-0.5 flex-shrink-0 ${
-                        pkg.accent ? 'text-secondary-light' : 'text-primary'
+                        pkg.gold ? 'text-primary-dark' : pkg.accent ? 'text-secondary-light' : 'text-primary'
                       }`}
                     />
-                    <span className={`text-sm ${pkg.accent ? 'text-white/90' : 'text-text-light'}`}>
+                    <span className={`text-sm ${pkg.gold ? 'text-text-light' : pkg.accent ? 'text-white/90' : 'text-text-light'}`}>
                       {feature}
                     </span>
                   </li>
                 ))}
               </ul>
-              <div className="pt-4 border-t border-white/20">
+              <div className={`pt-4 border-t ${pkg.gold ? 'border-text/10' : pkg.accent ? 'border-white/20' : 'border-warm-dark'}`}>
                 {pkg.priceWeek && (
-                  <p className={`text-sm ${pkg.accent ? 'text-white/70' : 'text-text-light'}`}>
+                  <p className={`text-sm ${pkg.gold ? 'text-text-light/80' : pkg.accent ? 'text-white/70' : 'text-text-light'}`}>
                     {pkg.priceWeek}
                   </p>
                 )}
-                <p className={`text-lg font-bold ${pkg.accent ? 'text-white' : 'text-primary'}`}>
+                <p className={`text-lg font-bold ${pkg.gold ? 'text-text' : pkg.accent ? 'text-white' : 'text-primary'}`}>
                   {pkg.priceMonth}
                 </p>
               </div>

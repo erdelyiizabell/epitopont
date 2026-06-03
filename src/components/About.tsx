@@ -8,9 +8,7 @@ export default function About() {
               Rólam
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl font-medium text-text mb-6">
-              Erdélyi Izabella vagyok,
-              <br />
-              <span className="text-primary italic">és várlak titeket.</span>
+              Erdélyi Izabella vagyok
             </h2>
             <div className="space-y-4 text-text-light leading-relaxed">
               <p>
