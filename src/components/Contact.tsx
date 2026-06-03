@@ -28,8 +28,8 @@ export default function Contact() {
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
             <Phone className="w-8 h-8 text-secondary-light mx-auto mb-4" />
             <h4 className="text-white font-semibold mb-2">Telefon</h4>
-            <a href="tel:+36000000000" className="text-white/80 hover:text-white transition-colors text-sm">
-              +36 00 000 0000
+            <a href="tel:+36304078583" className="text-white/80 hover:text-white transition-colors text-sm">
+              +36 30 407 8583
             </a>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
