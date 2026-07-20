@@ -36,7 +36,9 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="#kapcsolat"
+              href="https://app.minup.io/book/azepitopont"
+              target="_blank"
+              rel="noopener noreferrer"
               className="ml-4 px-6 py-2.5 bg-primary text-white rounded-full text-sm font-medium hover:bg-primary-dark transition-colors duration-200"
             >
               Időpontfoglalás
@@ -66,7 +68,9 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="#kapcsolat"
+              href="https://app.minup.io/book/azepitopont"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setIsOpen(false)}
               className="block text-center px-6 py-2.5 bg-primary text-white rounded-full text-sm font-medium mt-4"
             >

@@ -41,10 +41,12 @@ export default function Contact() {
 
         <div className="text-center">
           <a
-            href="mailto:info@azepitopont.hu"
+            href="https://app.minup.io/book/azepitopont"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-10 py-4 bg-white text-primary rounded-full font-semibold hover:bg-warm transition-colors duration-200 shadow-lg"
           >
-            Írj nekem!
+            Konzultációt kérek
           </a>
         </div>
       </div>
