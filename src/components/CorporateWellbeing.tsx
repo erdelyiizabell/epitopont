@@ -3,9 +3,17 @@ import { Check } from 'lucide-react'
 const packages = [
   {
     name: 'START csomag',
-    features: ['Heti 1 jóga vagy mindfulness alkalom', '90 perc', '15 fő'],
+    features: ['Mediáció (1 téma körüljárása)', '90 perc', '15 fő'],
     priceWeek: '49.000 Ft / hét',
     priceMonth: '175.000 Ft / hónap',
+    accent: false,
+    gold: false,
+  },
+  {
+    name: 'START PLUS csomag',
+    features: ['Mediáció (1 téma körüljárása)', 'Jóga (heti 1 alkalom)', '90 perc', '15 fő'],
+    priceWeek: '98.000 Ft / hét',
+    priceMonth: '350.000 Ft / hónap',
     accent: false,
     gold: false,
   },
@@ -65,7 +73,7 @@ export default function CorporateWellbeing() {
           </div>
         </div>
  
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {packages.map((pkg) => (
             <div
               key={pkg.name}
