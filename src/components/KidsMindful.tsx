@@ -52,12 +52,25 @@ export default function KidsMindful() {
           </div>
 
           <div>
-            <div className="bg-warm rounded-2xl p-8 mb-8">
-              <h4 className="font-semibold text-text mb-2">Iskolai program</h4>
-              <div className="flex flex-wrap gap-4 text-sm text-text-light">
-                <span className="bg-white px-4 py-2 rounded-full">45 perc / alkalom</span>
-                <span className="bg-white px-4 py-2 rounded-full">Max. 10 fő</span>
-                <span className="bg-white px-4 py-2 rounded-full font-semibold text-primary">25.000 Ft</span>
+            <div className="space-y-4 mb-8">
+              <div className="bg-warm rounded-2xl p-6 border border-warm-dark/30 shadow-sm">
+                <h4 className="font-semibold text-text mb-2">Iskolai program</h4>
+                <div className="flex flex-wrap gap-3 text-sm text-text-light">
+                  <span className="bg-white px-3 py-1.5 rounded-full">45 perc / alkalom</span>
+                  <span className="bg-white px-3 py-1.5 rounded-full">Max. 10 fő</span>
+                  <span className="bg-white px-3 py-1.5 rounded-full font-semibold text-primary">25.000 Ft</span>
+                </div>
+              </div>
+
+              <div className="bg-warm rounded-2xl p-6 border border-warm-dark/30 shadow-sm">
+                <h4 className="font-semibold text-text mb-1">Mindful gyermekfelügyelet (5 alkalom)</h4>
+                <p className="text-sm text-text-light leading-relaxed mb-3">
+                  Míg a szülők dolgoznak, biztonságos és tudatos környezetben vigyázok a gyerekekre egy mindfulness foglalkozás keretében.
+                </p>
+                <div className="flex flex-wrap gap-3 text-sm text-text-light">
+                  <span className="bg-white px-3 py-1.5 rounded-full">5 alkalom</span>
+                  <span className="bg-white px-3 py-1.5 rounded-full font-semibold text-primary">225.000 Ft</span>
+                </div>
               </div>
             </div>
 
