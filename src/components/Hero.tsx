@@ -1,9 +1,11 @@
+import { getAssetUrl } from '../utils/assets'
+
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center pt-24">
       <div className="absolute inset-0 z-0">
         <img
-          src={`${import.meta.env.BASE_URL}images/meditation-office.png`}
+          src={getAssetUrl('images/meditation-office.png')}
           alt="Az Építő Pont - Well-being és Mediáció"
           className="w-full h-full object-cover"
         />

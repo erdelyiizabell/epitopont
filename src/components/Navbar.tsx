@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import { getAssetUrl } from '../utils/assets'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -19,7 +20,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-24">
           <a href="#" className="flex items-center gap-3">
             <img
-              src={`${import.meta.env.BASE_URL}images/logo.png`}
+              src={getAssetUrl('images/logo.png')}
               alt="Az Építő Pont"
               className="h-20 w-auto"
             />

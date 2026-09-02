@@ -2,7 +2,7 @@ import { Mail, Phone, MapPin } from 'lucide-react'
 
 export default function Contact() {
   return (
-    <section id="kapcsolat" className="py-24 bg-primary">
+    <section id="kapcsolat" className="py-24 bg-primary scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <p className="text-secondary-light font-medium text-sm uppercase tracking-wider mb-3">

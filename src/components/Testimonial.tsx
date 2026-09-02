@@ -1,3 +1,5 @@
+import { getAssetUrl } from '../utils/assets'
+
 export default function Testimonial() {
   return (
     <section className="py-24 bg-white">
@@ -7,8 +9,8 @@ export default function Testimonial() {
             "
           </div>
           <img
-            src={`${import.meta.env.BASE_URL}images/hero-burnout.png`}
-            alt=""
+            src={getAssetUrl('images/hero-burnout.png')}
+            alt="Az Építő Pont - Kiégés és egyensúly"
             className="w-full max-w-2xl mx-auto rounded-2xl shadow-xl mb-12"
           />
           <div className="bg-warm rounded-2xl p-8 md:p-12 -mt-16 relative z-10 max-w-2xl mx-auto shadow-sm">

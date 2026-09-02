@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
+import Testimonial from '../components/Testimonial'
 import Services from '../components/Services'
 import CorporateWellbeing from '../components/CorporateWellbeing'
 import Mediation from '../components/Mediation'
@@ -13,6 +14,7 @@ export default function Index() {
     <>
       <Navbar />
       <Hero />
+      <Testimonial />
       <Services />
       <CorporateWellbeing />
       <Mediation />

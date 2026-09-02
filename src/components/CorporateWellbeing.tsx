@@ -1,4 +1,5 @@
 import { Check } from 'lucide-react'
+import { getAssetUrl } from '../utils/assets'
 
 const packages = [
   {
@@ -42,7 +43,7 @@ const packages = [
 
 export default function CorporateWellbeing() {
   return (
-    <section id="ceges-wellbeing" className="py-24 bg-white">
+    <section id="ceges-wellbeing" className="py-24 bg-white scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
           <div>
@@ -66,7 +67,7 @@ export default function CorporateWellbeing() {
           </div>
           <div className="rounded-2xl overflow-hidden shadow-xl">
             <img
-              src={`${import.meta.env.BASE_URL}images/corporate-yoga.png`}
+              src={getAssetUrl('images/corporate-yoga.png')}
               alt="Céges jóga és well-being program"
               className="w-full h-full object-cover"
             />

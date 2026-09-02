@@ -1,3 +1,5 @@
+import { getAssetUrl } from '../utils/assets'
+
 export default function Footer() {
   return (
     <footer className="py-12 bg-[#234b4b]">
@@ -5,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3">
             <img
-              src={`${import.meta.env.BASE_URL}images/logo-footer.jpg`}
+              src={getAssetUrl('images/logo-footer.jpg')}
               alt="Az Építő Pont"
               className="h-20 w-auto rounded-lg"
             />

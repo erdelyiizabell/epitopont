@@ -1,4 +1,5 @@
 import { Shield, Heart, Users, Home } from 'lucide-react'
+import { getAssetUrl } from '../utils/assets'
 
 const areas = [
   { icon: Users, title: 'Munkahelyi konfliktusok', description: 'Csapaton belüli feszültségek, kommunikációs problémák feltárása és megoldása.' },
@@ -9,12 +10,12 @@ const areas = [
 
 export default function Mediation() {
   return (
-    <section id="mediacio" className="py-24 bg-warm">
+    <section id="mediacio" className="py-24 bg-warm scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="order-2 lg:order-1 rounded-2xl overflow-hidden shadow-xl">
             <img
-              src={`${import.meta.env.BASE_URL}images/mediation.png`}
+              src={getAssetUrl('images/mediation.png')}
               alt="Mediáció - biztonságos tér a kommunikációhoz"
               className="w-full h-auto"
             />

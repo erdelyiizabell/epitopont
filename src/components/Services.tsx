@@ -1,4 +1,5 @@
 import { Heart, Users, Sparkles } from 'lucide-react'
+import { getAssetUrl } from '../utils/assets'
 
 const services = [
   {
@@ -26,7 +27,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="szolgaltatasok" className="py-24 bg-warm">
+    <section id="szolgaltatasok" className="py-24 bg-warm scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="font-serif text-3xl sm:text-4xl font-medium text-text">
@@ -43,7 +44,7 @@ export default function Services() {
             >
               <div className="h-56 overflow-hidden">
                 <img
-                  src={`${import.meta.env.BASE_URL}images/${service.image}`}
+                  src={getAssetUrl(`images/${service.image}`)}
                   alt={service.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />

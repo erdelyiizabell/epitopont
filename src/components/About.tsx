@@ -1,6 +1,8 @@
+import { getAssetUrl } from '../utils/assets'
+
 export default function About() {
   return (
-    <section id="rolam" className="py-24 bg-warm">
+    <section id="rolam" className="py-24 bg-warm scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
@@ -35,7 +37,7 @@ export default function About() {
           <div className="relative">
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img
-                src={`${import.meta.env.BASE_URL}images/about-portrait.png`}
+                src={getAssetUrl('images/about-portrait.png')}
                 alt="Erdélyi Izabella - Az Építő Pont"
                 className="w-full h-auto"
               />
