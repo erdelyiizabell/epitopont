@@ -126,8 +126,8 @@ export default function KidsMindful() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="rounded-2xl overflow-hidden shadow-xl border border-warm-dark/20">
             <img
-              src={getAssetUrl('images/services-collage.png')}
-              alt="Gyerek mindfulness foglalkozások"
+              src={getAssetUrl('images/kids-mindful-collage.png')}
+              alt="Gyerek mindfulness foglalkozások Erdélyi Izabellával"
               className="w-full h-auto object-cover"
             />
           </div>
