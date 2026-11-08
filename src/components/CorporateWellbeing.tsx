@@ -3,39 +3,67 @@ import { getAssetUrl } from '../utils/assets'
 
 const packages = [
   {
-    name: 'START csomag',
-    features: ['Mediáció (1 téma körüljárása)', '90 perc', '15 fő'],
+    name: 'PULZUS Tesztnap',
+    subtitle: 'Kockázatmentes, 1 alkalmas belépő',
+    forWhom: 'Cégeknek, akik elköteleződés nélkül szeretnék letesztelni, hogyan csökken le 90 perc alatt az irodai feszültség.',
+    features: [
+      'Előzetes Stressz- és Súrlódás Diagnosztika',
+      '90 perc helyszíni kombinált alkalom (max. 15 fő)',
+      '45 perc vezetett kommunikációs feszültségoldás',
+      '45 perc irodai gerinc-, nyak- és stressz-reset',
+      '15 perc vezetői kiértékelés és javaslat',
+    ],
+    bonus: 'Havi csomag indításakor a 49.000 Ft-ot 100%-ban jóváírjuk!',
+    priceWeek: 'Egyszeri alkalom',
+    priceMonth: '49.000 Ft',
+    accent: false,
+    gold: false,
+  },
+  {
+    name: 'FÓKUSZ csomag',
+    subtitle: 'Fizikai és mentális feltöltődés',
+    forWhom: 'Ülőmunkát végző, leterhelt csapatoknak, ahol a fő gond a hát-/derékfájás, a fáradtság és a napi stressz.',
+    features: [
+      'Heti 1× 90 perc Irodai Jóga & Gerinc-Reset (15 fő)',
+      'Mindfulness fókusz- és légzéstréning',
+      'Nyak-, váll- és derékfeszültségek célzott oldása',
+      'Negyedéves Stressz-Tükör mérés a csapatnak',
+    ],
+    bonus: 'Eredmény: Frissebb, fókuszáltabb csapat, kevesebb hiba.',
     priceWeek: '49.000 Ft / hét',
-    priceMonth: '175.000 Ft / hónap',
+    priceMonth: '179.000 Ft / hónap',
     accent: false,
     gold: false,
   },
   {
-    name: 'START PLUS csomag',
-    features: ['Mediáció (1 téma körüljárása)', 'Jóga (heti 1 alkalom)', '90 perc', '15 fő'],
-    priceWeek: '98.000 Ft / hét',
-    priceMonth: '350.000 Ft / hónap',
-    accent: false,
-    gold: false,
-  },
-  {
-    name: 'FLOW csomag',
-    features: ['Heti 2 alkalom (jóga és mindfulness)', '90 perc', '15 fő'],
+    name: 'SZINKRON csomag',
+    subtitle: '🔥 Legnépszerűbb • Mediáció & Regeneráció',
+    forWhom: 'Nagy nyomás alatt dolgozó cégeknek, ahol a stressz mellett részlegek közötti súrlódások is előfordulnak.',
+    features: [
+      'Heti 1× 90 perc Fizikai & Mentális Reset (jóga + mindfulness)',
+      'Heti 1× 90 perc „Csapat-Szinkron” & Mediáció (15 fő)',
+      'Részlegek közötti elakadások, feszültségek feloldása',
+      'SOS Mediációs keret akut konfliktusok esetére',
+    ],
+    bonus: 'Eredmény: Tiszta kommunikáció, megszűnik az egymásra mutogatás.',
     priceWeek: '89.000 Ft / hét',
-    priceMonth: '319.000 Ft / hónap',
+    priceMonth: '329.000 Ft / hónap',
     accent: true,
     gold: false,
   },
   {
-    name: 'HARMÓNIA csomag',
-    subtitle: 'Komplex vállalati program',
+    name: 'HARMÓNIA VIP',
+    subtitle: 'Komplex vállalati és vezetői pajzs',
+    forWhom: 'Közép- és nagyvállalatoknak, ahol a kulcsemberek és vezetők megtartása, tehermentesítése a legfontosabb.',
     features: [
-      'Jóga — heti 2 alkalom, 15 fővel',
-      'Konfliktuskezelés — heti 2 alkalom',
-      'Személyes kísérés — 5 fő számára, havi 2 alkalom',
+      'Heti 2× 90 perc Csoportos Well-being & Mediáció (2×15 fő)',
+      'Kulcsember Pajzs: 5 fő vezetőnek havi 2× egyéni kísérés',
+      'Négyszemközti stresszkezelés és konfliktus-coaching',
+      'Havi 1× Vezetői Stratégiai Visszajelzés (anonimizált)',
     ],
-    priceWeek: null,
-    priceMonth: '799.000 Ft / hónap',
+    bonus: 'Eredmény: Megtartott kulcsemberek, tehermentesített vezetők.',
+    priceWeek: 'Komplex havi program',
+    priceMonth: '690.000 Ft / hónap',
     accent: false,
     gold: true,
   },
@@ -78,45 +106,69 @@ export default function CorporateWellbeing() {
           {packages.map((pkg) => (
             <div
               key={pkg.name}
-              className={`rounded-2xl p-8 transition-all duration-300 ${
+              className={`rounded-2xl p-7 flex flex-col justify-between transition-all duration-300 ${
                 pkg.gold
                   ? 'bg-gradient-to-br from-secondary-light via-secondary to-[#b39359] text-text shadow-xl hover:scale-105 border border-secondary/30'
                   : pkg.accent
-                  ? 'bg-primary text-white shadow-xl scale-105'
+                  ? 'bg-primary text-white shadow-xl lg:scale-105'
                   : 'bg-warm border border-warm-dark'
               }`}
             >
-              <h3 className={`text-xl font-bold mb-1 ${pkg.gold ? 'text-text' : pkg.accent ? 'text-white' : 'text-text'}`}>
-                {pkg.name}
-              </h3>
-              {pkg.subtitle && (
-                <p className={`text-sm mb-4 ${pkg.gold ? 'text-text-light/90' : pkg.accent ? 'text-white/80' : 'text-text-light'}`}>
-                  {pkg.subtitle}
-                </p>
-              )}
-              <ul className="space-y-3 my-6">
-                {pkg.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-3">
-                    <Check
-                      className={`w-5 h-5 mt-0.5 flex-shrink-0 ${
-                        pkg.gold ? 'text-primary-dark' : pkg.accent ? 'text-secondary-light' : 'text-primary'
-                      }`}
-                    />
-                    <span className={`text-sm ${pkg.gold ? 'text-text-light' : pkg.accent ? 'text-white/90' : 'text-text-light'}`}>
-                      {feature}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-              <div className={`pt-4 border-t ${pkg.gold ? 'border-text/10' : pkg.accent ? 'border-white/20' : 'border-warm-dark'}`}>
-                {pkg.priceWeek && (
-                  <p className={`text-sm ${pkg.gold ? 'text-text-light/80' : pkg.accent ? 'text-white/70' : 'text-text-light'}`}>
-                    {pkg.priceWeek}
+              <div>
+                <h3 className={`text-xl font-bold mb-1 ${pkg.gold ? 'text-text' : pkg.accent ? 'text-white' : 'text-text'}`}>
+                  {pkg.name}
+                </h3>
+                {pkg.subtitle && (
+                  <p className={`text-xs font-medium uppercase tracking-wide mb-4 ${pkg.gold ? 'text-text-light/90' : pkg.accent ? 'text-secondary-light' : 'text-primary'}`}>
+                    {pkg.subtitle}
                   </p>
                 )}
-                <p className={`text-lg font-bold ${pkg.gold ? 'text-text' : pkg.accent ? 'text-white' : 'text-primary'}`}>
-                  {pkg.priceMonth}
+                {pkg.forWhom && (
+                  <div className={`rounded-xl p-3.5 mb-5 text-xs leading-relaxed ${
+                    pkg.gold
+                      ? 'bg-white/40 text-text'
+                      : pkg.accent
+                      ? 'bg-white/10 text-white/90'
+                      : 'bg-white text-text-light'
+                  }`}>
+                    <span className="font-semibold block mb-1">🎯 Kinek szól?</span>
+                    {pkg.forWhom}
+                  </div>
+                )}
+                <p className={`text-xs font-semibold uppercase tracking-wider mb-2.5 ${pkg.gold ? 'text-text' : pkg.accent ? 'text-white/80' : 'text-text'}`}>
+                  Mit kap a cég?
                 </p>
+                <ul className="space-y-2.5 mb-5">
+                  {pkg.features.map((feature) => (
+                    <li key={feature} className="flex items-start gap-2.5">
+                      <Check
+                        className={`w-4 h-4 mt-0.5 flex-shrink-0 ${
+                          pkg.gold ? 'text-primary-dark' : pkg.accent ? 'text-secondary-light' : 'text-primary'
+                        }`}
+                      />
+                      <span className={`text-sm leading-snug ${pkg.gold ? 'text-text-light' : pkg.accent ? 'text-white/90' : 'text-text-light'}`}>
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                {pkg.bonus && (
+                  <p className={`text-xs italic mb-4 ${pkg.gold ? 'text-text/90' : pkg.accent ? 'text-secondary-light' : 'text-primary'}`}>
+                    ✨ {pkg.bonus}
+                  </p>
+                )}
+                <div className={`pt-4 border-t ${pkg.gold ? 'border-text/10' : pkg.accent ? 'border-white/20' : 'border-warm-dark'}`}>
+                  {pkg.priceWeek && (
+                    <p className={`text-xs ${pkg.gold ? 'text-text-light/80' : pkg.accent ? 'text-white/70' : 'text-text-light'}`}>
+                      {pkg.priceWeek}
+                    </p>
+                  )}
+                  <p className={`text-lg font-bold ${pkg.gold ? 'text-text' : pkg.accent ? 'text-white' : 'text-primary'}`}>
+                    {pkg.priceMonth}
+                  </p>
+                </div>
               </div>
             </div>
           ))}
