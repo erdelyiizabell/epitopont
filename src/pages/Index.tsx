@@ -7,6 +7,7 @@ import KidsMindful from '../components/KidsMindful'
 import About from '../components/About'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
+import ExitIntentModal from '../components/ExitIntentModal'
 
 export default function Index() {
   return (
@@ -20,6 +21,7 @@ export default function Index() {
       <About />
       <Contact />
       <Footer />
+      <ExitIntentModal />
     </>
   )
 }

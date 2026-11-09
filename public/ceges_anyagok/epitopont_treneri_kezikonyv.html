@@ -201,10 +201,26 @@
       margin: 4px 0 10px;
     }
     @media print {
-      body { background: #fff; }
+      @page { size: A4; margin: 12mm; }
+      body {
+        background: #fff !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
       .top-bar { display: none !important; }
-      .container { margin: 0; max-width: 100%; padding: 0; }
-      .sheet { box-shadow: none; border: none; padding: 10px 15px; display: block !important; page-break-after: always; }
+      .container { margin: 0 !important; max-width: 100% !important; padding: 0 !important; }
+      .sheet {
+        box-shadow: none !important;
+        border: none !important;
+        padding: 4mm 2mm !important;
+        display: block !important;
+        page-break-after: always;
+      }
+      .sheet:last-child { page-break-after: auto; }
+      .timeline-block, .card, .module-box, .script-quote {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
     }
   </style>
 </head>
@@ -218,8 +234,12 @@
       <button class="tab-btn" onclick="showTab(2)">3. Irodai Gerinc-Reset & Mindfulness (Átöltözés nélkül)</button>
       <button class="tab-btn" onclick="showTab(3)">4. 8 hetes Céges Tematika (SZINKRON / FÓKUSZ)</button>
       <a href="epitopont_ceges_eszkoztar.html" class="tab-btn" style="text-decoration:none;">← Vissza a Stressz-Teszthez & Ajánlathoz</a>
+      <a href="epitopont_mesterkonyv_es_munkalapok.html" class="tab-btn" style="text-decoration:none; background:#fff; color:var(--primary-dark);">🎓 B2B Mesterkönyv + 4 Új Munkalap →</a>
     </div>
-    <button class="print-btn" onclick="window.print()">🖨️ Nyomtatás / PDF</button>
+    <div style="display:flex; gap:8px; align-items:center;">
+      <a href="pdf/Az_Epito_Pont_Treneri_Kezikonyv_Oravazlatok.pdf" download class="print-btn" style="text-decoration:none; background:var(--gold); color:#1f2937;">📥 Kész PDF letöltése</a>
+      <button class="print-btn" onclick="window.print()">🖨️ Nyomtatás</button>
+    </div>
   </div>
 
   <div class="container">

@@ -330,22 +330,28 @@
     }
 
     @media print {
-      body { background: #fff; }
+      @page { size: A4; margin: 12mm; }
+      body {
+        background: #fff !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
       .top-bar { display: none !important; }
-      .container { margin: 0; max-width: 100%; padding: 0; }
+      .container { margin: 0 !important; max-width: 100% !important; padding: 0 !important; }
       .sheet {
-        box-shadow: none;
-        border: none;
-        padding: 10px 15px;
-        margin: 0;
+        display: block !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding: 4mm 2mm !important;
+        margin: 0 !important;
+        page-break-after: always;
       }
-      .eval-box {
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+      .sheet:last-child {
+        page-break-after: auto;
       }
-      .category-block, .pain-card, .pkg-table th {
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+      .category-block, .pain-card, .pkg-table tr, .eval-box, .sos-card, .step-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
       }
     }
   </style>
@@ -360,8 +366,12 @@
       <button class="tab-btn" onclick="showTab(2)">3. Csoportos Munkalap & SOS Stresszoldó Kártya</button>
       <button class="tab-btn" onclick="showTab('all')">Összes nézet (Egyben)</button>
       <a href="epitopont_treneri_kezikonyv.html" class="tab-btn" style="text-decoration:none; background:var(--gold); color:#1f2937;">📘 Tréneri Kézikönyv & Óravázlatok →</a>
+      <a href="epitopont_mesterkonyv_es_munkalapok.html" class="tab-btn" style="text-decoration:none; background:#fff; color:var(--primary-dark);">🎓 B2B Mesterkönyv + 4 Új Munkalap →</a>
     </div>
-    <button class="print-btn" onclick="window.print()">🖨️ Nyomtatás / Mentés PDF-ként</button>
+    <div style="display:flex; gap:8px; align-items:center;">
+      <a href="pdf/Az_Epito_Pont_Ceges_Diagnosztika_es_Ajanlat.pdf" download class="print-btn" style="text-decoration:none; background:var(--gold); color:#1f2937;">📥 Kész PDF letöltése</a>
+      <button class="print-btn" onclick="window.print()">🖨️ Nyomtatás</button>
+    </div>
   </div>
 
   <div class="container">
